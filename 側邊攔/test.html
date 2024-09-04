@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可開合側邊欄</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            color: white;
+            overflow-y: auto;
+            transition: 0.3s;
+            padding-top: 60px;
+            z-index: 1000;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            margin: 0;
+            padding: 8px 16px;
+            background-color: #111;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #575757;
+        }
+
+        .dropdown-content {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: #333;
+            display: none; /* 初始隱藏 */
+        }
+
+        .dropdown-content li {
+            padding: 8px 0;
+            padding-left: 16px;
+            text-align: left;
+        }
+
+        .dropdown-content li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #575757;
+        }
+
+        .arrow {
+            float: right;
+            transition: transform 0.3s;
+            font-size: 12px;
+        }
+
+        .arrow.open {
+            transform: rotate(180deg);
+        }
+
+        .open-btn, .close-btn {
+            position: absolute;
+            top: 10px;
+            background-color: #111;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1001;
+            transition: left 0.3s;
+        }
+
+        .close-btn {
+            right: 10px; /* 靠右 */
+        }
+
+        .open-btn {
+            left: 10px;
+            display: none;
+        }
+
+        #mainContent {
+            margin-left: 250px;
+            padding: 20px;
+            transition: margin-left 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeBtn">&#9664;</button> <!-- 向右箭頭 -->
+        <h2>側邊欄</h2>
+        <ul>
+            <li>
+                <div class="dropdown" onclick="toggleDropdown(1)">
+                    <span>選項 1</span>
+                    <span class="arrow" id="arrow1">&#9660;</span>
+                </div>
+                <ul class="dropdown-content" id="dropdownContent1">
+                    <li><a href="#">子選項 1-1</a></li>
+                    <li><a href="#">子選項 1-2</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="dropdown" onclick="toggleDropdown(2)">
+                    <span>選項 2</span>
+                    <span class="arrow" id="arrow2">&#9660;</span>
+                </div>
+                <ul class="dropdown-content" id="dropdownContent2">
+                    <li><a href="#">子選項 2-1</a></li>
+                    <li><a href="#">子選項 2-2</a></li>
+                </ul>
+            </li>
+            <li><a href="#">選項 3</a></li>
+        </ul>
+    </div>
+
+    <div id="mainContent">
+        <button class="open-btn" id="openBtn">&#9654;</button> <!-- 向左箭頭 -->
+        <h1>主內容區域</h1>
+        <p>這是主內容區域的文本。</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('mainContent');
+            const openBtn = document.getElementById('openBtn');
+            const closeBtn = document.getElementById('closeBtn');
+        
+            closeBtn.addEventListener('click', function() {
+                sidebar.style.left = '-250px';
+                mainContent.style.marginLeft = '0';
+                openBtn.style.display = 'block'; // 顯示 open-btn
+            });
+        
+            openBtn.addEventListener('click', function() {
+                sidebar.style.left = '0';
+                mainContent.style.marginLeft = '250px';
+                openBtn.style.display = 'none'; // 隱藏 open-btn
+            });
+        });
+        
+        function toggleDropdown(id) {
+            const content = document.getElementById(`dropdownContent${id}`);
+            const arrow = document.getElementById(`arrow${id}`);
+            console.log(`Toggling dropdown ${id}`); // 檢查函數是否被調用
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                arrow.classList.remove('open');
+            } else {
+                content.style.display = 'block';
+                arrow.classList.add('open');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\FX507ZC4\\Desktop\\test\\test web form\\WebApplication1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8AB04EB5-869C-4669-AFEE-7A41991849C7}|WebApplication1\\WebApplication1.csproj|c:\\users\\fx507zc4\\desktop\\test\\test web form\\webapplication1\\webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AB04EB5-869C-4669-AFEE-7A41991849C7}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AB04EB5-869C-4669-AFEE-7A41991849C7}|WebApplication1\\WebApplication1.csproj|c:\\users\\fx507zc4\\desktop\\test\\test web form\\webapplication1\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8AB04EB5-869C-4669-AFEE-7A41991849C7}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AB04EB5-869C-4669-AFEE-7A41991849C7}|WebApplication1\\WebApplication1.csproj|c:\\users\\fx507zc4\\desktop\\test\\test web form\\webapplication1\\webapplication1\\wwwroot\\css\\announcement.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8AB04EB5-869C-4669-AFEE-7A41991849C7}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\wwwroot\\css\\announcement.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AB04EB5-869C-4669-AFEE-7A41991849C7}|WebApplication1\\WebApplication1.csproj|c:\\users\\fx507zc4\\desktop\\test\\test web form\\webapplication1\\webapplication1\\wwwroot\\css\\layout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8AB04EB5-869C-4669-AFEE-7A41991849C7}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\wwwroot\\css\\layout.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AB04EB5-869C-4669-AFEE-7A41991849C7}|WebApplication1\\WebApplication1.csproj|c:\\users\\fx507zc4\\desktop\\test\\test web form\\webapplication1\\webapplication1\\wwwroot\\js\\layout.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{8AB04EB5-869C-4669-AFEE-7A41991849C7}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\wwwroot\\js\\layout.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "announcement.css",
+              "DocumentMoniker": "C:\\Users\\FX507ZC4\\Desktop\\test\\test web form\\WebApplication1\\WebApplication1\\wwwroot\\css\\announcement.css",
+              "RelativeDocumentMoniker": "WebApplication1\\wwwroot\\css\\announcement.css",
+              "ToolTip": "C:\\Users\\FX507ZC4\\Desktop\\test\\test web form\\WebApplication1\\WebApplication1\\wwwroot\\css\\announcement.css",
+              "RelativeToolTip": "WebApplication1\\wwwroot\\css\\announcement.css",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAIwAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-04T01:30:44.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\FX507ZC4\\Desktop\\test\\test web form\\WebApplication1\\WebApplication1\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\FX507ZC4\\Desktop\\test\\test web form\\WebApplication1\\WebApplication1\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-04T01:29:00.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "layout.js",
+              "DocumentMoniker": "C:\\Users\\FX507ZC4\\Desktop\\test\\test web form\\WebApplication1\\WebApplication1\\wwwroot\\js\\layout.js",
+              "RelativeDocumentMoniker": "WebApplication1\\wwwroot\\js\\layout.js",
+              "ToolTip": "C:\\Users\\FX507ZC4\\Desktop\\test\\test web form\\WebApplication1\\WebApplication1\\wwwroot\\js\\layout.js",
+              "RelativeToolTip": "WebApplication1\\wwwroot\\js\\layout.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-09-04T00:53:32.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "layout.css",
+              "DocumentMoniker": "C:\\Users\\FX507ZC4\\Desktop\\test\\test web form\\WebApplication1\\WebApplication1\\wwwroot\\css\\layout.css",
+              "RelativeDocumentMoniker": "WebApplication1\\wwwroot\\css\\layout.css",
+              "ToolTip": "C:\\Users\\FX507ZC4\\Desktop\\test\\test web form\\WebApplication1\\WebApplication1\\wwwroot\\css\\layout.css",
+              "RelativeToolTip": "WebApplication1\\wwwroot\\css\\layout.css",
+              "ViewState": "AQIAADcAAAAAAAAAAAD4v0gAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-04T00:14:28.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\FX507ZC4\\Desktop\\test\\test web form\\WebApplication1\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\FX507ZC4\\Desktop\\test\\test web form\\WebApplication1\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAADIAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-03T08:47:06.226Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

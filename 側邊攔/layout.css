@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    color: white;
+    overflow-y: auto;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 0;
+    padding: 8px 16px;
+    background-color: #111;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
+
+.dropdown-content {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    display: none; /* 初始隱藏 */
+}
+
+.dropdown-content li {
+    padding: 8px 0;
+    padding-left: 16px;
+    text-align: left;
+}
+
+.dropdown-content li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #575757;
+}
+
+.arrow {
+    float: right;
+    transition: transform 0.3s;
+    font-size: 12px;
+}
+
+.arrow.open {
+    transform: rotate(180deg);
+}
+
+.open-btn, .close-btn {
+    position: absolute;
+    top: 10px;
+    background-color: #111;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: left 0.3s;
+}
+
+.close-btn {
+    right: 10px; /* 靠右 */
+}
+
+.open-btn {
+    left: 10px;
+    display: none;
+}
+
+#mainContent {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+}

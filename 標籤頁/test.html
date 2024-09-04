@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表單切換</title>
+    <style>
+        /* 標籤容器樣式 */
+        .tab-container {
+            display: flex;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        /* 單個標籤樣式 */
+        .tab {
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            background-color: #f1f1f1;
+        }
+
+        /* 被選中的標籤樣式 */
+        .tab.active {
+            background-color: #fff;
+            font-weight: bold;
+        }
+
+        /* 表單容器樣式 */
+        .form-container {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        /* 當前顯示的表單容器 */
+        .form-container.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="tab-container">
+    <div class="tab active" onclick="openForm(event, 'form1')">表單 1</div>
+    <div class="tab" onclick="openForm(event, 'form2')">表單 2</div>
+    <div class="tab" onclick="openForm(event, 'form3')">表單 3</div>
+</div>
+
+<div id="form1" class="form-container active">
+    <h2>表單 1</h2>
+    <form>
+        <label for="name1">名字:</label>
+        <input type="text" id="name1" name="name1"><br><br>
+        <input type="submit" value="提交">
+    </form>
+</div>
+
+<div id="form2" class="form-container">
+    <h2>表單 2</h2>
+    <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <input type="submit" value="提交">
+    </form>
+</div>
+
+<div id="form3" class="form-container">
+    <h2>表單 3</h2>
+    <form>
+        <label for="phone">電話號碼:</label>
+        <input type="tel" id="phone" name="phone"><br><br>
+        <input type="submit" value="提交">
+    </form>
+</div>
+
+<script>
+    function openForm(evt, formId) {
+        // 隱藏所有的表單
+        var forms = document.getElementsByClassName('form-container');
+        for (var i = 0; i < forms.length; i++) {
+            forms[i].classList.remove('active');
+        }
+
+        // 移除所有標籤的 active 樣式
+        var tabs = document.getElementsByClassName('tab');
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].classList.remove('active');
+        }
+
+        // 顯示選中的表單並設置對應標籤為 active
+        document.getElementById(formId).classList.add('active');
+        evt.currentTarget.classList.add('active');
+    }
+</script>
+
+</body>
+</html>

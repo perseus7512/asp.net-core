@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>步驟進度條</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #f0f0f0;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .progress-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .step {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: lightgray;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step.active {
+            background-color: dodgerblue;
+        }
+
+        .line {
+            height: 4px;
+            background-color: lightgray;
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        .line.active {
+            background-color: dodgerblue;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: dodgerblue;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn:disabled {
+            background-color: lightgray;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-container">
+        <div class="progress-bar">
+            <div class="step" id="step1">1</div>
+            <div class="line" id="line1"></div>
+            <div class="step" id="step2">2</div>
+            <div class="line" id="line2"></div>
+            <div class="step" id="step3">3</div>
+        </div>
+        <div class="controls">
+            <button class="btn" id="prevBtn">上一個步驟</button>
+            <button class="btn" id="nextBtn">下一個步驟</button>
+        </div>
+    </div>
+
+    <script>
+        let currentStep = 1;
+
+        function updateProgress(step) {
+            document.querySelectorAll('.step, .line').forEach(element => {
+                element.classList.remove('active');
+            });
+
+            for (let i = 1; i <= step; i++) {
+                document.getElementById(`step${i}`).classList.add('active');
+                if (i < step) {
+                    document.getElementById(`line${i}`).classList.add('active');
+                }
+            }
+
+            document.getElementById('prevBtn').disabled = step === 1;
+            document.getElementById('nextBtn').disabled = step === 3;
+        }
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentStep > 1) {
+                currentStep--;
+                updateProgress(currentStep);
+            }
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (currentStep < 3) {
+                currentStep++;
+                updateProgress(currentStep);
+            }
+        });
+
+        updateProgress(currentStep); // Initialize progress
+    </script>
+</body>
+</html>

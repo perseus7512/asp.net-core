@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公告區</title>
+    <style>
+        /* 標題樣式 */
+        .announcement {
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* 箭頭樣式 */
+        .arrow {
+            font-size: 12px;
+            transform: rotate(0deg);
+            transition: transform 0.3s;
+        }
+
+        /* 當內容顯示時，箭頭旋轉 */
+        .announcement.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        /* 公告內容樣式 */
+        .content {
+            padding: 10px;
+            display: none;
+            border: 1px solid #ccc;
+            border-top: none;
+            background-color: #f1f1f1;
+        }
+
+        /* 顯示公告內容 */
+        .content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="announcement" onclick="toggleContent('content1')">
+    公告 1
+    <span class="arrow">▼</span>
+</div>
+<div id="content1" class="content">
+    這是公告 1 的內容。這裡可以顯示詳細的公告訊息。
+</div>
+
+<div class="announcement" onclick="toggleContent('content2')">
+    公告 2
+    <span class="arrow">▼</span>
+</div>
+<div id="content2" class="content">
+    這是公告 2 的內容。這裡可以顯示詳細的公告訊息。
+</div>
+
+<div class="announcement" onclick="toggleContent('content3')">
+    公告 3
+    <span class="arrow">▼</span>
+</div>
+<div id="content3" class="content">
+    這是公告 3 的內容。這裡可以顯示詳細的公告訊息。
+</div>
+
+<script>
+    function toggleContent(contentId) {
+        var content = document.getElementById(contentId);
+        var announcement = content.previousElementSibling;
+        
+        // 切換公告內容顯示狀態
+        content.classList.toggle('active');
+        announcement.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
