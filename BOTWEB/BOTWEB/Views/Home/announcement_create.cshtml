@@ -1,0 +1,57 @@
+﻿<script src="~/js/Announcement_create.js" asp-append-version="true"></script>
+<link href="~/css/Announcement_create.css" rel="stylesheet" asp-append-version="true" />
+<form id="announcementForm" class="row g-3 mt-sm-1 p-2">
+    <b>新增公告</b>
+    <div class="col-md-6">
+        <label for="AnnouncementObject" class="form-label">公告對象</label>
+        <select id="AnnouncementObject" class="form-select" required>
+            <option value="" disabled selected>請選擇</option>
+            <option value="All">全部</option>
+            <option value="APP">APP</option>
+            <option value="ExecutiveSide">行員端</option>
+        </select>
+        <div class="invalid-feedback">請選擇公告對象</div>
+    </div>
+    <div class="col-md-6">
+        <label for="AnnouncementLevel" class="form-label">公告等級</label>
+        <select id="AnnouncementLevel" class="form-select" required>
+            <option value="" disabled selected>請選擇</option>
+            <option value="important">重要</option>
+            <option value="generally">一般</option>
+        </select>
+        <div class="invalid-feedback">請選擇公告等級</div>
+    </div>
+    <div class="col-md-6">
+        <label for="userCategory" class="form-label">用戶類別</label>
+        <select id="userCategory" class="form-select" required>
+            <option value="" disabled selected>請選擇</option>
+            <option value="P">個人網銀（代碼:P）</option>
+            <option value="C">e企合成網（代碼:C）</option>
+        </select>
+        <div class="invalid-feedback">請選擇用戶類別</div>
+    </div>
+    <div class="col-md-6">
+        <label for="subject" class="form-label">主旨</label>
+        <input type="text" class="form-control" id="subject" placeholder="請輸入，最多10字" maxlength="10" required>
+        <div class="invalid-feedback">請輸入主旨（最多10字）</div>
+    </div>
+    <div class="col-12">
+        <label for="AnnouncementContent" class="form-label">公告內容</label>
+        <textarea class="form-control" id="AnnouncementContent" rows="5" placeholder="請輸入，最多50字" maxlength="50" required></textarea>
+        <div class="invalid-feedback">請輸入公告內容（最多50字）</div>
+    </div>
+    <div class="col-md-6">
+        <label for="StartDate" class="form-label">開始日期</label>
+        <input type="text" id="StartDate" class="form-control" placeholder="請選擇" onfocus="(this.type='date')" onblur="if(!this.value){this.type='text'}" required />
+    </div>
+    <div class="col-md-6">
+        <label for="EndDate" class="form-label">結束日期</label>
+        <input type="text" id="EndDate" class="form-control" placeholder="請選擇" onfocus="(this.type='date')" onblur="if(!this.value){this.type='text'}" required />
+    </div>
+    <div class="col-md-6">
+        <button type="button" class="btn btn-outline-dark" onclick="saveDraft()" id="saveBtn">存成草稿</button>
+    </div>
+    <div class="col-md-6">
+        <button type="button" class="btn btn-primary" onclick="submitForm()" id="submitBtn">發布</button>
+    </div>
+</form>

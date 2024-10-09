@@ -1,0 +1,189 @@
+﻿<script src="~/js/Role_create.js" asp-append-version="true"></script>
+<link href="~/css/Role_create.css" rel="stylesheet" asp-append-version="true" />
+<form class="row g-3 mt-1 mx-3 p-4">
+    <b>新增角色</b>
+    <div class="col-md-6">
+        <label for="BelongingToGroup" class="form-label">所屬群組</label>
+        <input type="text" class="form-control" id="BelongingToGroup" placeholder="請輸入">
+    </div>
+    <div class="col-md-6">
+        <label for="ExclusiveUnit" class="form-label">專屬單位</label>
+        <input type="text" class="form-control" id="ExclusiveUnit" placeholder="請輸入">
+    </div>
+    <div class="col-md-6">
+        <label for="CharacterName" class="form-label">角色名稱</label>
+        <input type="text" class="form-control" id="CharacterName" placeholder="請輸入">
+    </div>
+    <div class="col-md-6">
+        <label for="RoleDescription" class="form-label">角色說明</label>
+        <input type="text" class="form-control" id="RoleDescription" placeholder="請輸入">
+    </div>
+    <div class="col-md-6">
+        <label for="RoleNumber" class="form-label">角色編號</label>
+        <input type="text" class="form-control" id="RoleNumber" placeholder="請輸入">
+        <p>若設為0，則由系統自行產生編號</p>
+    </div>
+    <div class="col-md-12">
+        <div class="permission-section row mb-4 align-items-stretch">
+            <div class="col-2 d-flex align-items-center font-weight-bold" id="title">代辦事項</div>
+            <div class="col-5 d-flex align-items-center permission-list">
+                <ul>
+                    <li>主管稽核（主管權限）</li>
+                    <li>申請事項列表（非主管權限）</li>
+                </ul>
+            </div>
+            <div class="col-5 permission-settings d-flex justify-content-end align-items-center">
+                <label class="me-2">權限設定</label>
+                <div class="radio-options">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="permission1" value="檢視" checked>
+                        <label class="form-check-label">檢視</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="permission1" value="覆核">
+                        <label class="form-check-label">覆核</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="permission-section row mb-4 align-items-stretch">
+            <div class="col-2 d-flex align-items-center font-weight-bold" id="title">公告</div>
+            <div class="col-5 d-flex align-items-center permission-list">
+                <ul>
+                    <li>公告列表</li>
+                </ul>
+            </div>
+            <div class="col-5 permission-settings d-flex justify-content-end">
+                <label class="me-3">權限設定</label>
+                <div class="radio-options mt-2">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="permission2" value="檢視" checked>
+                        <label class="form-check-label">檢視</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="permission2" value="覆核">
+                        <label class="form-check-label">覆核</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="permission-section row mb-4 align-items-stretch">
+            <div class="col-2 d-flex align-items-center font-weight-bold" id="title">系統管理</div>
+            <div class="col-5 d-flex align-items-center permission-list">
+                <ul>
+                    <li>前置系統管理</li>
+                    <li>推播系統管理</li>
+                    <li>角色系統管理</li>
+                </ul>
+            </div>
+            <div class="col-5 permission-settings d-flex justify-content-end align-items-center">
+                <div class="d-flex flex-column">
+                    <label>權限設定</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="permission2" value="無權限">
+                        <label class="form-check-label">無權限</label>
+                    </div>
+                </div>
+                <div class="radio-options d-flex align-items-center ms-3 pt-4">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="permission2" value="檢視" checked>
+                        <label class="form-check-label">檢視</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="permission2" value="覆核">
+                        <label class="form-check-label">覆核</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="permission-section row mb-4 align-items-stretch">
+            <div class="col-2 d-flex align-items-center font-weight-bold" id="title">使用者管理</div>
+            <div class="col-5 d-flex align-items-center permission-list">
+                <ul>
+                    <li>使用者管理</li>
+                </ul>
+            </div>
+            <div class="col-5 permission-settings d-flex justify-content-end align-items-center">
+                <div class="d-flex flex-column">
+                    <label>權限設定</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="permission2" value="無權限">
+                        <label class="form-check-label">無權限</label>
+                    </div>
+                </div>
+                <div class="radio-options d-flex align-items-center ms-3 pt-4">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="permission2" value="檢視" checked>
+                        <label class="form-check-label">檢視</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="permission2" value="覆核">
+                        <label class="form-check-label">覆核</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="permission-section row mb-4 align-items-stretch">
+            <div class="col-2 d-flex align-items-center font-weight-bold" id="title">查詢</div>
+            <div class="col-5 d-flex align-items-center permission-list">
+                <ul>
+                    <li>查詢</li>
+                </ul>
+            </div>
+            <div class="col-5 permission-settings d-flex justify-content-end">
+                <label class="me-3">權限設定</label>
+                <div class="radio-options mt-2">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="permission5" value="檢視" checked>
+                        <label class="form-check-label">檢視</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="permission5" value="覆核">
+                        <label class="form-check-label">覆核</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="permission-section row mb-4 align-items-stretch">
+            <div class="col-2 d-flex align-items-center font-weight-bold" id="title">績效管理</div>
+            <div class="col-5 d-flex align-items-center permission-list">
+                <ul>
+                    <li>統計報表</li>
+                    <li>動態密碼總申請數</li>
+                    <li>前置系統使用次數統計</li>
+                    <li>客戶交易筆數統計</li>
+                </ul>
+            </div>
+            <div class="col-5 permission-settings d-flex justify-content-end align-items-center">
+                <div class="d-flex flex-column">
+                    <label>權限設定</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="permission2" value="無權限">
+                        <label class="form-check-label">無權限</label>
+                    </div>
+                </div>
+                <div class="radio-options d-flex align-items-center ms-3 pt-4">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="permission2" value="檢視" checked>
+                        <label class="form-check-label">檢視</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="permission2" value="覆核">
+                        <label class="form-check-label">覆核</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 提交按鈕 -->
+    <div class="col-md-12">
+        <button type="submit" class="btn btn-outline-dark" onclick="location.href='@Url.Action("Role", "Home")';">回前頁</button>
+        <button type="submit" class="btn btn-primary">新增</button>
+    </div>
+</form>

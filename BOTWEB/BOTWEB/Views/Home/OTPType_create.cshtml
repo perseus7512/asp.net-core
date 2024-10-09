@@ -1,0 +1,213 @@
+﻿<link href="~/css/OTPType_create.css" rel="stylesheet" asp-append-version="true" />
+<script src="~/js/OTPType_create.js" defer asp-append-version="true"></script>
+<div id="create" class="p-5">
+    <b>新增前置系統別</b>
+    <div class="step-container">
+        <div class="line"></div> <!-- 移到外面的 line -->
+
+        <div class="step active">
+            <div class="step-number mt-4"></div>
+            <div class="step-label">步驟一</div>
+        </div>
+
+        <div class="step">
+            <div class="step-number mt-4"></div>
+            <div class="step-label">步驟二</div>
+        </div>
+
+        <div class="step completed">
+            <div class="step-number mt-4"></div>
+            <div class="step-label">完成</div>
+        </div>
+    </div>
+
+    <div id="step1" class="step-page">
+        <form class="row m-5" id="fromStep1">
+            <div class="col-md-6">
+                <label for="Code" class="form-label">前置系統代碼</label>
+                <input type="text" class="form-control" id="Code">
+            </div>
+            <div class="col-md-6">
+                <label for="Name" class="form-label">前置系統名稱</label>
+                <input type="text" class="form-control" id="Name">
+            </div>
+            <div class="col-md-6 mt-3">
+                <label for="OTPaging" class="form-label">OTP時效</label>
+                <input type="text" class="form-control" id="OTPaging">
+            </div>
+            <div class="col-md-6 mt-3">
+                <label for="ValidTime" class="form-label">註冊碼有效時間</label>
+                <input type="text" class="form-control" id="ValidTime">
+            </div>
+            <div class="col-md-6 mt-3">
+                <label for="Number" class="form-label">可註冊用戶數</label>
+                <input type="text" class="form-control" id="Number">
+            </div>
+            <div class="col-md-6 mt-3">
+                <label for="ErrorCount" class="form-label">錯誤可嘗試次數</label>
+                <input type="text" class="form-control" id="ErrorCount">
+            </div>
+            <div class="col-md-6 mt-3">
+                <label for="userCategory" class="form-label">參與前置系統別</label>
+                <select id="userCategory" class="form-select" required>
+                    <option value="" disabled selected>請輸入</option>
+                    <option value="P">個人網銀（代碼:P）</option>
+                    <option value="C">e企合成網（代碼:C）</option>
+                </select>
+            </div>
+            <div class="col-md-6 mt-3">
+                <label class="form-label">是否為父系統</label>
+                <div>
+                    <div class="form-check form-check-inline pe-5">
+                        <input class="form-check-input" type="radio" name="ParentSystem" id="ParentSystemYes" value="yes">
+                        <label class="form-check-label" for="ParentSystemYes">是</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="ParentSystem" id="ParentSystemNo" value="no">
+                        <label class="form-check-label" for="ParentSystemNo">否</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <label for="OTPcount" class="form-label">可申辦OTP服務數量</label>
+                <input type="text" class="form-control" id="OTPcount">
+            </div>
+            <div class="col-md-6 mt-3">
+                <label for="SystemNumber" class="form-label">上層前置系統編號</label>
+                <select id="SystemNumber" class="form-select" required>
+                    <option value="" disabled selected>請選擇</option>
+                    <option value="P">個人網銀（代碼:P）</option>
+                    <option value="C">e企合成網（代碼:C）</option>
+                </select>
+            </div>
+            <div class="col-md-6 mt-3">
+                <label for="allowedIP" class="form-label">可允許IP位置</label>
+                <div class="input-group">
+                    <input type="text" class="form-control me-3" placeholder="輸入IP地址" aria-label="輸入IP地址" id="allowedIP">
+                    <button class="btn btn-dark rounded" type="button">加入IP</button>
+                </div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <label class="form-label">&nbsp;</label>
+                <div class="input-group">
+                    <input type="text" class="form-control me-3" placeholder="輸入IP地址" aria-label="輸入IP地址">
+                    <button class="btn btn-dark rounded" type="button">移除IP</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="step2" class="step-page m-3" style="display: none;">
+        <form id="formStep2" class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label">允許線上申辦行動推播動態密碼服務</label>
+                <div>
+                    <div class="form-check form-check-inline pe-5">
+                        <input class="form-check-input" type="radio" name="AllowOnlinePushOTP" id="AllowOnlinePushOTPYes" value="yes">
+                        <label class="form-check-label" for="AllowOnlinePushOTPYes">是</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="AllowOnlinePushOTP" id="AllowOnlinePushOTPNo" value="no">
+                        <label class="form-check-label" for="AllowOnlinePushOTPNo">否</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">允許線上申辦簡訊動態密碼服務</label>
+                <div>
+                    <div class="form-check form-check-inline pe-5">
+                        <input class="form-check-input" type="radio" name="AllowOnlineSMSOTP" id="AllowOnlineSMSOTPYes" value="yes">
+                        <label class="form-check-label" for="AllowOnlineSMSOTPYes">是</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="AllowOnlineSMSOTP" id="AllowOnlineSMSOTPNo" value="no">
+                        <label class="form-check-label" for="AllowOnlineSMSOTPNo">否</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">允許線上註銷行動推播動態密碼服務</label>
+                <div>
+                    <div class="form-check form-check-inline pe-5">
+                        <input class="form-check-input" type="radio" name="AllowOnlineDelPushOTP" id="AllowOnlineDelPushOTPYes" value="yes">
+                        <label class="form-check-label" for="AllowOnlineDelPushOTPYes">是</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="AllowOnlineDelPushOTP" id="AllowOnlineDelPushOTPNo" value="no">
+                        <label class="form-check-label" for="AllowOnlineDelPushOTPNo">否</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">允許線上註銷簡訊動態密碼服務</label>
+                <div>
+                    <div class="form-check form-check-inline pe-5">
+                        <input class="form-check-input" type="radio" name="AllowOnlineDelSMSOTP" id="AllowOnlineDelSMSOTPYes" value="yes">
+                        <label class="form-check-label" for="AllowOnlineDelSMSOTPYes">是</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="AllowOnlineDelSMSOTP" id="AllowOnlineDelSMSOTPNo" value="no">
+                        <label class="form-check-label" for="AllowOnlineDelSMSOTPNo">否</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">是否可查詢用戶申請紀錄</label>
+                <div>
+                    <div class="form-check form-check-inline pe-5">
+                        <input class="form-check-input" type="radio" name="QueryUser" id="QueryUserYes" value="yes">
+                        <label class="form-check-label" for="QueryUserYes">是</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="QueryUser" id="QueryUserNo" value="no">
+                        <label class="form-check-label" for="QueryUserNo">否</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">允許子前置系統取得註冊認證資料</label>
+                <div>
+                    <div class="form-check form-check-inline pe-5">
+                        <input class="form-check-input" type="radio" name="Registration" id="RegistrationYes" value="yes">
+                        <label class="form-check-label" for="RegistrationYes">是</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Registration" id="RegistrationNo" value="no">
+                        <label class="form-check-label" for="RegistrationNo">否</label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="step3" class="step-page m-3 text-center" style="display: none;">
+        送程成功!
+    </div>
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    @* <h5 class="modal-title" id="staticBackdropLabel">Static Backdrop Modal</h5> *@
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    新增前置系統別<br>即將送出資料，是否確定?
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="flex-basis: 225px;">取消</button>
+                    <button type="button" class="btn btn-primary" style="flex-basis: 225px;" onclick="confirmAndNext()">確定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="controls text-center row g-3 m-5" style="position: relative;">
+    <div class="col-md-6">
+        <button class="btn btn-outline-dark" id="prevBtn" onclick="prevStep()">取消</button>
+    </div>
+    <div class="col-md-6" style="position: relative;">
+        <button class="btn btn-dark" id="nextBtn" onclick="nextStep()">下一步</button>
+    </div>
+</div>
+</div>

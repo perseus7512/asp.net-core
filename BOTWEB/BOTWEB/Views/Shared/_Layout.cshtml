@@ -1,0 +1,116 @@
+﻿@{
+    bool showPagination = ViewBag.ShowPagination ?? true;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BOTWEB</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> *@
+    <link rel="stylesheet" href="~/BOTWEB.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/layout.css" asp-append-version="true" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/layout.js" asp-append-version="true"></script>
+    <script src="~/js/moment.min.js" asp-append-version="true"></script>
+    <script src="~/js/daterangepicker.min.js" asp-append-version="true" defer></script>
+    <link rel="stylesheet" href="~/css/daterangepicker.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="sidebar" id="sidebar">
+            <button class="close-btn" id="closeBtn">&#9664;</button>
+            <h2>側邊欄</h2>
+            <ul>
+                <li>
+                    <div class="dropdown" id="dropdown1" onclick="toggleDropdown(1)">
+                        <span>待辦事項</span>
+                        <span class="arrow" id="arrow1">&#9660;</span>
+                    </div>
+                    <ul class="dropdown-content" id="dropdownContent1">
+                        <li class="chat-item" onclick="location.href='@Url.Action("Index", "Home")';">主管稽核</li>
+                        <li class="chat-item" onclick="location.href='@Url.Action("Index", "Home")';">申請事項列表</li>
+                    </ul>
+                </li>
+                <li class="ms-2" onclick="location.href='@Url.Action("announcement", "Home")';">公告</li>
+                <li>
+                    <div class="dropdown" id="dropdown2" onclick="toggleDropdown(2)">
+                        <span>系統管理</span>
+                        <span class="arrow" id="arrow2">&#9660;</span>
+                    </div>
+                    <ul class="dropdown-content" id="dropdownContent2">
+                        <li class="chat-item" onclick="location.href='@Url.Action("OTPType", "Home")';">前置系統管理</li>
+                        <li class="chat-item" onclick="location.href='@Url.Action("AppVersion", "Home")';">推播系統管理</li>
+                        <li class="chat-item" onclick="location.href='@Url.Action("Role", "Home")';">角色權限管理</li>
+                    </ul>
+                </li>
+                <li class="ms-2" onclick="location.href='@Url.Action("UserM", "Home")';">使用者管理</li>
+                <li class="ms-2 mt-2" onclick="location.href='@Url.Action("ProblemReport","Home")';">申請與紀錄查詢</li>
+                <li>
+                    <div class="dropdown" id="dropdown3" onclick="toggleDropdown(3)">
+                        <span>績效管理</span>
+                        <span class="arrow" id="arrow3">&#9660;</span>
+                    </div>
+                    <ul class="dropdown-content" id="dropdownContent3">
+                        <li class="chat-item" onclick="location.href='@Url.Action("Index", "Home")';">統計報表</li>
+                        <li class="chat-item" onclick="location.href='@Url.Action("Index", "Home")';">動態密碼總申請戶數</li>
+                        <li class="chat-item" onclick="location.href='@Url.Action("Index", "Home")';">前置系統使用次數統計</li>
+                        <li class="chat-item" onclick="location.href='@Url.Action("Index", "Home")';">客戶交易筆數統計</li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="toolbar">
+                <nav aria-label="breadcrumb" class="breadcrumb-container">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">@ViewData["CurrentPage"]</li>
+                    </ol>
+                </nav>
+
+                <!-- 設置兩個按鈕 -->
+                <div class="button-container">
+                    <button class="share">台銀</button>
+                    <button class="account">帳戶</button>
+                </div>
+            </div>
+            <div class="chat-content">
+                <!-- 這裡可以放置更多內容 -->
+                @RenderBody()
+                    @if (showPagination)
+                    {
+                <nav id="pagination" aria-label="Page navigation example" class="d-flex justify-content-center mt-4">
+                    <ul class="pagination">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">←</span> 前一頁
+                            </a>
+                        </li>
+                        <li class="page-item active" aria-current="page">
+                            <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><span class="page-link">...</span></li>
+                        <li class="page-item"><a class="page-link" href="#">11</a></li>
+                        <li class="page-item"><a class="page-link" href="#">12</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                下一頁 <span aria-hidden="true">→</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                    }
+            </div>
+        </main>
+        <button class="open-btn" id="openBtn">&#9654;</button> <!-- 向右箭頭 -->
+        @await RenderSectionAsync("Scripts", required: false)
+    </div>
+</body>
+</html>

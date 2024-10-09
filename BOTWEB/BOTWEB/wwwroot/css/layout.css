@@ -1,0 +1,277 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+
+.sidebar {
+    position: relative;
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    overflow-y: auto;
+    transition: width 0.3s ease;
+    z-index: 1000;
+    flex-shrink: 0;
+    /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px 0 0 8px;*/
+}
+
+    .sidebar h2 {
+        text-align: center;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+
+    .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        .sidebar ul li {
+            padding: 15px 20px;
+            cursor: pointer;
+        }
+
+            .sidebar ul li a {
+                color: white;
+                text-decoration: none;
+                padding: 5px 10px;
+            }
+
+            .sidebar ul li:hover {
+                background-color: #34495e;
+                border-radius: 4px;
+            }
+
+    .sidebar.collapsed {
+        width: 0;
+        overflow: hidden;
+        transition: width 0.3s ease;
+    }
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    /*padding-left: 250px;  預設側邊欄寬度 */
+    transition: padding-left 0.3s ease;
+    background-color: #ecf0f1;
+}
+
+.toolbar {
+    background-color: #bdc3c7; /* 设置灰色背景 */
+    display: flex; /* 使用 flexbox 布局 */
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: space-between; /* 两边对齐 */
+    padding: 10px; /* 添加内边距 */
+    width: 100%;  确保 toolbar 占满父容器 
+    box-sizing: border-box; /* 确保 padding 不影响宽度 */
+    /*max-width: 1200px;*/ /* 设置最大宽度，可根据需要调整 */
+    /*margin: 0 auto;*/  使 toolbar 居中 
+}
+
+/* 設置麵包屑導航的樣式 */
+.breadcrumb {
+    flex: 1; /* 分配剩餘空間 */
+    margin: 0; /* 移除 margin */
+    white-space: nowrap; /* 防止文本換行 */
+    overflow: hidden; /* 隱藏超出範圍的文本 */
+    text-overflow: ellipsis; /* 使用省略號來表示溢出的文本 */
+}
+
+/* 設置按鈕樣式 */
+button.share, button.account {
+    width: 100px; /* 固定寬度 */
+    height: 40px; /* 固定高度 */
+    font-size: 14px; /* 字體大小 */
+    text-align: center; /* 文本居中 */
+    background-color: #007bff; /* 按鈕背景色 */
+    color: white; /* 按鈕文字顏色 */
+    border: none; /* 移除邊框 */
+    border-radius: 5px; /* 圓角樣式 */
+    cursor: pointer; /* 鼠標樣式 */
+    transition: background-color 0.3s; /* 過渡效果 */
+    margin-left: 10px; /* 左側添加間距 */
+}
+
+    /* 按鈕懸停時的效果 */
+    button.share:hover, button.account:hover {
+        background-color: #0056b3; /* 改變背景色 */
+    }
+
+
+.chat-content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    /*background-color:darkgrey;*/
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+.open-btn, .close-btn {
+    position: absolute;
+    top: 15px;
+    background-color: #34495e;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1001;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+    .open-btn:hover, .close-btn:hover {
+        background-color: #2c3e50;
+    }
+
+.open-btn {
+    left: 15px;
+    display: none; /* 初始狀態隱藏 */
+}
+
+.close-btn {
+    right: 15px;
+}
+
+.sidebar.collapsed + .main-content {
+    padding-left: 0;
+}
+
+.dropdown {
+    display: flex; /* 使用 flexbox 來排列內容 */
+    align-items: center; /* 垂直居中對齊 */
+    cursor: pointer; /* 鼠標樣式 */
+    justify-content: space-between; /* 在兩端之間均勻分布 */
+    padding: 5px 10px; /* 添加上下左右內邊距 */
+}
+
+
+.dropdown-content {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #34495e;
+    display: none; /* 初始隱藏 */
+    border-radius: 4px;
+    transition: display 0.3s ease; /* 增加過渡動畫 */
+}
+
+    .dropdown-content li {
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+        .dropdown-content li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+            .dropdown-content li a:hover {
+                background-color: #2980b9;
+                border-radius: 4px;
+            }
+
+/* 預設狀態 - 向下箭頭 */
+aside .arrow {
+    font-size: 14px !important; /* 使用更高優先級的大小設置 */
+    width: 20px !important; /* 固定寬度 */
+    height: 20px !important; /* 固定高度 */
+    display: inline-block; /* 保持箭頭和文字在同一行 */
+    text-align: center; /* 居中文字 */
+    margin-left: 5px; /* 增加間距，使箭頭不貼在文字上 */
+    vertical-align: middle; /* 保持垂直對齊 */
+    line-height: 20px; /* 調整行高以對齊箭頭 */
+    transition: transform 0.3s ease;
+    transform: rotate(0deg);
+}
+
+    /* 當下拉選單打開時，箭頭向上 */
+    .arrow.opened {
+        transform: rotate(180deg); /* 旋轉180度 */
+    }
+
+/* 下拉選單初始隱藏狀態 */
+.dropdown-content {
+    visibility: hidden; /* 項目不可見 */
+    opacity: 0; /* 完全透明 */
+    max-height: 0; /* 最大高度為0，這樣內容不可見 */
+    overflow: hidden; /* 隱藏超出部分 */
+    transition: visibility 0.3s, opacity 0.3s, max-height 0.3s ease-out; /* 添加過渡效果 */
+}
+
+    /* 顯示下拉選單 */
+    .dropdown-content.expanded {
+        visibility: visible; /* 項目可見 */
+        opacity: 1; /* 內容完全不透明 */
+        max-height: 500px; /* 根據需要調整最大高度 */
+        transition: visibility 0.3s, opacity 0.3s, max-height 0.3s ease-in; /* 過渡效果 */
+    }
+
+/*頁碼*/
+/* 基本的 pagination 頁碼按鈕樣式設置 */
+.pagination .page-link {
+    padding: 10px 15px;
+    border-radius: 4px; 
+    color: #333; 
+}
+
+    /* active 和 hover 狀態下的樣式設置 */
+    .pagination .page-item.active .page-link,
+    .pagination .page-link:hover {
+        background-color: #333; 
+        color: white; 
+        border-radius: 8px; 
+        border: none; 
+    }
+
+/* 禁用項目 (disabled) 的樣式 */
+.pagination .page-item.disabled .page-link {
+    color: #bbb; 
+    cursor: not-allowed;
+}
+
+/* 處理省略符 (...) 的樣式 */
+.pagination .page-item span.page-link {
+    cursor: default; 
+}
+
+/* 整體滾動條寬度 */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #2c3e50; /* 滾動條背景顏色 */
+}
+
+/* 滾動條的軌道 */
+::-webkit-scrollbar-track {
+    background-color: #34495e; /* 滾動條軌道顏色 */
+    border-radius: 10px;
+}
+
+/* 滾動條的滑塊 */
+::-webkit-scrollbar-thumb {
+    background-color: #2980b9; /* 滾動條滑塊顏色 */
+    border-radius: 10px;
+}
+
+    /* 當滑鼠懸停在滑塊時 */
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #1abc9c; /* 當滑鼠懸停時變色 */
+    }
+
+    /* 當點擊滾動條時 */
+    ::-webkit-scrollbar-thumb:active {
+        background-color: #16a085; /* 當滾動條被點擊時變色 */
+    }
+

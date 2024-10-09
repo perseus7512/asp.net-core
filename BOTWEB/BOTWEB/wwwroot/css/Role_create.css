@@ -1,0 +1,41 @@
+﻿form{
+    background-color:white;
+}
+b{
+    text-align:center;
+}
+.radio-options {
+    display: flex;
+    align-items: center;
+}
+
+#title {
+    background-color: #bcbcbc;
+}
+
+.permission-section {
+    display: flex;
+    align-items: center;
+}
+
+.permission-list {
+    border: solid 1px;
+    border-right:none;
+}
+
+.permission-settings {
+    border: solid 1px;
+    border-left:none;
+}
+
+.form-check {
+    margin-right:0;
+    text-align:right;
+}
+
+.form-check-input {
+    margin-right: 5px;
+}
+.form-check-label {
+    margin-right: 10px; /* 控制 label 與下一個 radio 的間距 */
+}

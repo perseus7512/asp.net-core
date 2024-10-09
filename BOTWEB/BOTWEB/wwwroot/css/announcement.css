@@ -1,0 +1,85 @@
+﻿form {
+    background-color: white;
+    border-radius: 8px;
+}
+
+#announcement {
+    background-color: white;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%; /* 確保表格撐滿外部容器 */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table th, .table td {
+    text-align: center; /* 讓表格中的文字居中對齊 */
+    padding: 8px; /* 增加內部間距，讓表格看起來更美觀 */
+    vertical-align: middle;
+    /*border-bottom: 1px solid #ddd;*/
+}
+
+    .table td[colspan="7"] {
+        text-align: left; /* 讓內容靠左對齊 */
+        padding: 10px; /* 增加內部間距 */
+        background-color: #f9f9f9; /* 改變背景顏色 */
+    }
+
+
+thead {
+    background-color: #FFCCE5;
+    border-bottom: none;
+}
+
+.table thead th {
+    border-bottom: none; /* 移除表頭單元格的底部邊框 */
+    box-shadow: none; /* 防止使用陰影效果顯示線條 */
+}
+
+/* 標籤選項卡樣式 */
+.tab-container {
+    display: flex;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+}
+
+    .tab.active {
+        background-color: #ddd;
+        border-bottom: 2px solid white; /* 顯示選中的標籤 */
+    }
+
+/* 公告內容樣式 */
+.content {
+    display: none; /* 預設隱藏 */
+    padding: 10px;
+    border-top: 1px solid #ddd; /* 增加頂部邊框以區分 */
+    background-color: #f9f9f9; /* 更改背景顏色 */
+    text-align: left; /* 文字靠左 */
+    width: 100%; /* 撐滿寬度 */
+}
+
+.arrow {
+    float: right;
+    font-size: 12px;
+}
+
+.border-custom {
+    position: relative;
+}
+
+    .border-custom::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 1rem; /* 讓線條從最左側開始 */
+        width: calc(100% - 2rem); /* 減去 padding 的寬度 */
+        border-bottom: 2px solid black; /* 調整 border 的樣式 */
+    }

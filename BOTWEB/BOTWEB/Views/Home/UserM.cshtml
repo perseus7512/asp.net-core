@@ -1,0 +1,125 @@
+﻿<link href="~/css/UserM.css" rel="stylesheet" asp-append-version="true" />
+<script src="~/js/UserM.js" asp-append-version="true" defer></script>
+
+<script src="~/js/moment.min.js" asp-append-version="true"></script>
+<script src="~/js/daterangepicker.min.js" asp-append-version="true" defer></script>
+<link rel="stylesheet" href="~/css/daterangepicker.css" asp-append-version="true" />
+
+<form asp-action="Search" method="post" class="container mt-4 bg-light border rounded w-100">
+    <div class="container mt-3">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-end">
+                <div class="me-2">
+                    <label for="quickSearch" class="form-label">快速查詢選項:</label>
+                    <select id="quickSearch" class="form-select" aria-label="Default select example" name="QuickSearchOption">
+                        <option value="" disabled selected>請選擇</option>
+                        <option value="全部">全部</option>
+                        <option value="正常用戶">正常用戶</option>
+                        <option value="註銷用戶">註銷用戶</option>
+                        <option value="暫禁用戶">暫禁用戶</option>
+                        <option value="鎖定用戶">鎖定用戶</option>
+                    </select>
+                </div>
+                <div class="d-flex align-items-center">
+                    <button type="reset" class="btn btn-outline-dark me-2" id="resetButton">重置</button>
+                    <button type="button" class="btn btn-primary">查詢</button>
+                </div>
+            </div>
+            <div class="text-end mt-4">
+                <button id="toggleButton" type="button" class="btn btn-outline-secondary">更多查詢選項 ▼</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 隱藏的表單欄位 -->
+    <div id="advancedSearchContainer" class="p-3 bg-white rounded">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <label for="userType">用戶類別</label>
+                <select id="userType" name="UserType" class="form-control">
+                    <option value="" disabled selected>請選擇</option>
+                    <option value="">全部</option>
+                    <option value="Registered">個人網銀</option>
+                    <option value="Guest">e企合成網</option>
+                </select>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="idNumber">統一編號</label>
+                <input type="text" id="idNumber" name="IdNumber" class="form-control" placeholder="請輸入" />
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="phoneNumber">電話號碼</label>
+                <input type="text" id="phoneNumber" name="PhoneNumber" class="form-control" placeholder="請輸入" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <label for="userStatus">使用者狀態</label>
+                <select id="userStatus" name="UserStatus" class="form-control">
+                    <option value="" disabled selected>請選擇</option>
+                    <option value="">全部</option>
+                    <option value="正常使用">正常使用</option>
+                    <option value="註銷">註銷</option>
+                    <option value="暫禁">暫禁</option>
+                    <option value="停用">停用</option>
+                    <option value="未開通">已申請未開通</option>
+                </select>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="itemType">申請項目類別</label>
+                <select id="itemType" name="ItemType" class="form-control">
+                    <option value="" disabled selected>請選擇</option>
+                    <option value="">全部</option>
+                    <option value="Type1">簡訊動態密碼</option>
+                    <option value="Type2">行動推播動態密碼</option>
+                </select>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="daterange">查詢起迄時間</label>
+                <input type="text" id="daterange" name="daterange" class="form-control" placeholder="請選擇" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<form>
+    <table class="table">
+        <div class="d-flex align-items-center">
+            <div class="btn-group me-auto">
+                <button type="button" class="btn btn-secondary">全部</button>
+                <button type="button" class="btn btn-secondary">推播使用者</button>
+                <button type="button" class="btn btn-secondary">簡訊使用者</button>
+            </div>
+            <button type="button" class="btn btn-print ms-auto">列印本頁</button>
+        </div>
+        <thead>
+            <tr>
+                <th scope="col">用戶類別</th>
+                <th scope="col">統一編號</th>
+                <th scope="col">安控項目</th>
+                <th scope="col">裝置名稱</th>
+                <th scope="col">行動電話門號</th>
+                <th scope="col">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>個人網銀</td>
+                <td>A123456789</td>
+                <td>行動推播動態密碼</td>
+                <td>AABB000</td>
+                <td>0912345670</td>
+                <td><button type="button" class="check">查看明細與操作</button></td>
+            </tr>
+            <tr>
+                <td>個人網銀</td>
+                <td>B123456789</td>
+                <td>行動推播動態密碼</td>
+                <td>AABB001</td>
+                <td>0912345671</td>
+                <td><button type="button" class="check">查看明細與操作</button></td>
+            </tr>
+
+        </tbody>
+    </table>
+</form>

@@ -1,0 +1,47 @@
+﻿.container {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 陰影 */
+    border-radius: 10px; /* 圓角 */
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between; /* 項目之間的空間分佈 */
+    align-items: flex-end; /* 垂直對齊項目 */
+}
+
+
+.flex-grow-1 {
+    flex-grow: 0; /* 避免容器擴展 */
+    width: fit-content; /* 根據內容自動調整大小 */
+    flex-shrink: 0; /* 避免縮小 */
+    min-width: 0; /* 防止容器過度擴展 */
+}
+
+#advancedSearchContainer {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease; /* 添加過渡動畫效果 */
+    border-top: 1px solid #e0e0e0;
+}
+
+
+#quickSearch {
+    width: 300px;
+    margin-bottom: 0;
+}
+
+#toggleButton {
+    margin-top: 4px;
+}
+
+button#toggleButton {
+    transition: transform 0.3s ease; /* 讓箭頭有動畫效果 */
+}
+form {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 統一的陰影效果 */
+    border-radius: 10px; /* 統一的圓角效果 */
+    border: 1px solid #e0e0e0; /* 添加邊框，讓邊緣看起來整齊 */
+    overflow: hidden; /* 確保圓角應用在所有內容 */
+}

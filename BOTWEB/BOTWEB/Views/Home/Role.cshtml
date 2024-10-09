@@ -1,0 +1,95 @@
+﻿<link href="~/css/Role.css" rel="stylesheet" asp-append-version="true" />
+
+<form class="p-3">
+    <div class="row m-2 h5 fw-bolder">角色查詢</div>
+    <div class="row m-3">
+        <div class="col">
+            <label for="Group" class="form-label">所屬群組</label>
+            <select id="Group" class="form-select">
+                <option value="" disabled selected>請選擇</option>
+                <option value="Action">e企總行</option>
+                <option value="Take">一般分行</option>
+            </select>
+        </div>
+        <div class="col">
+            <label for="Character" class="form-label">角色名稱</label>
+            <select id="Character" class="form-select">
+                <option value="" disabled selected>請選擇</option>
+                <option value="InitialRole">初始角色</option>
+                <option value="HeadOffice">總行經辦</option>
+                <option value="OfficeManager">總行主管</option>
+            </select>
+        </div>
+    </div>
+    <div class="row mt-3 me-3">
+        <div class="col text-end">
+            <button type="reset" class="btn btn-outline-dark me-3">重置</button>
+            <button type="button" class="btn btn-primary">查詢</button>
+        </div>
+    </div>
+</form>
+
+<div id="Role" class="mt-4 px-4">
+    <button type="button" class="btn btn-success my-3" style="float: right;" onclick="location.href='@Url.Action("Role_create", "Home")';">新增角色</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>RoldId</th>
+                <th>角色名稱</th>
+                <th>所屬群組</th>
+                <th>專屬單位</th>
+                <th class="text-center">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AA</td>
+                <td>初始角色</td>
+                <td>e企總行</td>
+                <td>123</td>
+                <td id="operate">
+                    <button type="button" class="btn btn-danger">查看</button>
+                    <button type="button" class="btn btn-primary">編輯</button>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">刪除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>AA</td>
+                <td>總行經辦</td>
+                <td>一般分行</td>
+                <td>123</td>
+                <td id="operate">
+                    <button type="button" class="btn btn-danger">查看</button>
+                    <button type="button" class="btn btn-primary">編輯</button>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">刪除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>AA</td>
+                <td>總行主管</td>
+                <td>e企總行</td>
+                <td>123</td>
+                <td id="operate">
+                    <button type="button" class="btn btn-danger">查看</button>
+                    <button type="button" class="btn btn-primary">編輯</button>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">刪除</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
+        <!-- 添加 modal-dialog-centered 和 justify-content-center -->
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                刪除角色<br />確定要刪除此角色?
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">確定</button>
+            </div>
+        </div>
+    </div>
+</div>

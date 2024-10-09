@@ -1,0 +1,93 @@
+﻿<link href="~/css/OTPType.css" rel="stylesheet" asp-append-version="true" />
+
+<div class="d-flex justify-content-between align-items-center">
+    <form class="w-100 p-3">
+        <!-- 使用 w-100 確保表單寬度為 100% -->
+        <div class="d-flex align-items-end row">
+            <!-- 使用 d-flex 將內部元素對齊底部 -->
+            <div class="me-3 col-4">
+                <label for="userCategory" class="form-label flex-grow-1">用戶類別</label>
+                <select id="userCategory" class="form-select">
+                    <option value="" disabled selected>請選擇</option>
+                    <option value="All">全部</option>
+                    <option value="P">個人網銀</option>
+                    <option value="C">e企合成網</option>
+                </select>
+            </div>
+            <div class="d-flex align-items-center col">
+                <!-- 將按鈕組合在同一行 -->
+                <button type="reset" class="btn btn-outline-dark me-4">重置</button>
+                <button type="button" class="btn btn-primary">查詢</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div id="otptype" class="mt-4 px-4">
+    <button type="button" class="btn btn-success my-3" style="float: right;" onclick="location.href='@Url.Action("OTPType_create", "Home")';">新增前置系統別</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>系統別代碼</th>
+                <th>前置系統別名稱</th>
+                <th>服務狀態</th>
+                <th>參數名稱</th>
+                <th>系統別編號</th>
+                <th class="text-center">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AA</td>
+                <td>e企合成網</td>
+                <td>啟用</td>
+                <td>App_test</td>
+                <td>c</td>
+                <td id="operate">
+                    <button type="button" class="btn btn-danger">停用</button>
+                    <button type="button" class="btn btn-primary">編輯</button>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">刪除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>AA</td>
+                <td>e企合成網</td>
+                <td>啟用</td>
+                <td>App_test</td>
+                <td>c</td>
+                <td id="operate">
+                    <button type="button" class="btn btn-danger">停用</button>
+                    <button type="button" class="btn btn-primary">編輯</button>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">刪除</button>
+                </td>
+            </tr>
+            <tr>
+                <td>AA</td>
+                <td>e企合成網</td>
+                <td>啟用</td>
+                <td>App_test</td>
+                <td>c</td>
+                <td id="operate">
+                    <button type="button" class="btn btn-danger">停用</button>
+                    <button type="button" class="btn btn-primary">編輯</button>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">刪除</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
+        <!-- 添加 modal-dialog-centered 和 justify-content-center -->
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                刪除前置系統別<br />確定要刪除此前置系統別?
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">確定</button>
+            </div>
+        </div>
+    </div>
+</div>

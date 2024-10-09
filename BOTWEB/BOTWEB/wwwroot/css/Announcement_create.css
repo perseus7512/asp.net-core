@@ -1,0 +1,20 @@
+﻿form {
+    border-radius: 8px;
+}
+
+#announcementForm {
+    background-color: white;
+}
+
+b {
+    text-align: center;
+}
+
+#AnnouncementContent {
+    resize: none;
+}
+
+#saveBtn, #submitBtn {
+    width: 100%;
+    height: 100%
+}

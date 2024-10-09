@@ -1,0 +1,49 @@
+﻿form {
+    border: 1px solid #ccc; /* 設定邊框顏色和寬度 */
+    border-radius: 8px; /* 設定圓角 */
+    background-color: white; /* 設定背景顏色 */
+    padding: 0 12px; /* 設定內部左右間距 */
+    font-size: 16px; /* 設定字體大小 */
+    color: black; /* 設定字體顏色 */
+    font-weight:bolder;
+}
+#Role {
+    border: 1px solid #ccc; /* 設定邊框顏色和寬度 */
+    border-radius: 8px; /* 設定圓角 */
+    background-color: white; /* 設定背景顏色 */
+    padding: 0 12px; /* 設定內部左右間距 */
+    font-size: 16px; /* 設定字體大小 */
+    color: black; /* 設定字體顏色 */
+}
+
+#operate {
+    display: flex;
+    justify-content:center;
+    gap: 20px;
+}
+
+    #operate button {
+        flex-basis:75px;
+        flex-grow: 0;
+    }
+
+table {
+    width: 100%; /* 確保表格撐滿外部容器 */
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 8px; /* 增加內部間距，讓表格看起來更美觀 */
+    vertical-align: middle;
+    /*border-bottom: 1px solid #ddd;*/
+}
+
+thead {
+    background-color: #fff40090;
+    border-bottom: none;
+}
+
+.table thead th {
+    border-bottom: none; /* 移除表頭單元格的底部邊框 */
+    box-shadow: none; /* 防止使用陰影效果顯示線條 */
+}

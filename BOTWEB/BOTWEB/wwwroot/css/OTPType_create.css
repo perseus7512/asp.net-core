@@ -1,0 +1,87 @@
+﻿#create {
+    background-color: white;
+    border-radius: 8px;
+}
+
+b {
+    display: block; /* 確保它是塊級元素 */
+    text-align: center; /* 使內容居中 */
+    font-weight: bold; /* 確保文字加粗 */
+    margin-bottom: 10px; /* 增加與步驟條之間的間距 */
+}
+
+.step-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.step {
+    position: relative;
+    text-align: center;
+    flex: 1;
+    margin-top:10px;
+}
+
+.step-number {
+    width: 30px; /* 圓圈大小 */
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ccc; /* 預設灰色 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.step.active .step-number {
+    background-color: blue; /* 當前步驟顏色 */
+}
+
+.step.completed .step-number {
+    background-color: green; /* 已完成步驟顏色 */
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+    left: 17%;
+    width: 65%;
+    height: 3px;
+    background-color: #ccc; /* 預設線條顏色 */
+    z-index: 0;
+    transform: translateY(-50%);
+}
+
+.step.active ~ .line {
+    background-color: blue; /* 完成步驟的線條顏色 */
+}
+
+.step-label {
+    margin-top: 10px;
+}
+
+.step-page {
+    display: none;
+}
+
+    .step-page.active {
+        display: block;
+    }
+
+label {
+    font-weight: bold;
+}
+
+.modal-body{
+    text-align:center;
+}
+
+#prevBtn,#nextBtn{
+    width: 100%;
+}
