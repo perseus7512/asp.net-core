@@ -1,9 +1,15 @@
-﻿form{
-    background-color:white;
+﻿form {
+    background-color: white;
+    border-radius: 8px;
 }
 b{
     text-align:center;
 }
+
+label,li{
+    font-weight:bolder;
+}
+
 .radio-options {
     display: flex;
     align-items: center;
@@ -11,6 +17,8 @@ b{
 
 #title {
     background-color: #bcbcbc;
+    border-radius: 8px 0 0 8px;
+    font-weight: bolder;
 }
 
 .permission-section {
@@ -19,13 +27,19 @@ b{
 }
 
 .permission-list {
-    border: solid 1px;
-    border-right:none;
+    border-right: none;
+    background-color: #e3e3e3;
 }
 
+    .permission-list ul {
+        margin-bottom: 0;
+    }
+
 .permission-settings {
-    border: solid 1px;
-    border-left:none;
+    display: flex;
+    align-items: center;
+    border-radius: 0 8px 8px 0;
+    background-color:#e3e3e3;
 }
 
 .form-check {
@@ -38,4 +52,8 @@ b{
 }
 .form-check-label {
     margin-right: 10px; /* 控制 label 與下一個 radio 的間距 */
+}
+
+#back,#create {
+    width: 100%;
 }

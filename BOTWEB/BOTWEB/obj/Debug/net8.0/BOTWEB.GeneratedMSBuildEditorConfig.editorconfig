@@ -9,63 +9,63 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BOTWEB
 build_property.RootNamespace = BOTWEB
-build_property.ProjectDir = C:\Users\FX507ZC4\Desktop\test web form\BOTWEB\BOTWEB\
+build_property.ProjectDir = C:\Users\FX507ZC4\Desktop\台銀\test web form\BOTWEB\BOTWEB\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\FX507ZC4\Desktop\test web form\BOTWEB\BOTWEB
+build_property.MSBuildProjectDirectory = C:\Users\FX507ZC4\Desktop\台銀\test web form\BOTWEB\BOTWEB
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/FX507ZC4/Desktop/test web form/BOTWEB/BOTWEB/Views/Home/announcement.cshtml]
+[C:/Users/FX507ZC4/Desktop/台銀/test web form/BOTWEB/BOTWEB/Views/Home/announcement.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhbm5vdW5jZW1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FX507ZC4/Desktop/test web form/BOTWEB/BOTWEB/Views/Home/announcement_create.cshtml]
+[C:/Users/FX507ZC4/Desktop/台銀/test web form/BOTWEB/BOTWEB/Views/Home/announcement_create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhbm5vdW5jZW1lbnRfY3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FX507ZC4/Desktop/test web form/BOTWEB/BOTWEB/Views/Home/AppVersion.cshtml]
+[C:/Users/FX507ZC4/Desktop/台銀/test web form/BOTWEB/BOTWEB/Views/Home/AppVersion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBcHBWZXJzaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FX507ZC4/Desktop/test web form/BOTWEB/BOTWEB/Views/Home/OTPType.cshtml]
+[C:/Users/FX507ZC4/Desktop/台銀/test web form/BOTWEB/BOTWEB/Views/Home/OTPType.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPVFBUeXBlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FX507ZC4/Desktop/test web form/BOTWEB/BOTWEB/Views/Home/OTPType_create.cshtml]
+[C:/Users/FX507ZC4/Desktop/台銀/test web form/BOTWEB/BOTWEB/Views/Home/OTPType_create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPVFBUeXBlX2NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FX507ZC4/Desktop/test web form/BOTWEB/BOTWEB/Views/Home/ProblemReport.cshtml]
+[C:/Users/FX507ZC4/Desktop/台銀/test web form/BOTWEB/BOTWEB/Views/Home/ProblemReport.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9ibGVtUmVwb3J0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FX507ZC4/Desktop/test web form/BOTWEB/BOTWEB/Views/Home/Role.cshtml]
+[C:/Users/FX507ZC4/Desktop/台銀/test web form/BOTWEB/BOTWEB/Views/Home/Role.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSb2xlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FX507ZC4/Desktop/test web form/BOTWEB/BOTWEB/Views/Home/Role_create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSb2xlX2NyZWF0ZS5jc2h0bWw=
+[C:/Users/FX507ZC4/Desktop/台銀/test web form/BOTWEB/BOTWEB/Views/Home/Role_CRUD.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSb2xlX0NSVUQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FX507ZC4/Desktop/test web form/BOTWEB/BOTWEB/Views/Home/UserM.cshtml]
+[C:/Users/FX507ZC4/Desktop/台銀/test web form/BOTWEB/BOTWEB/Views/Home/UserM.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyTS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FX507ZC4/Desktop/test web form/BOTWEB/BOTWEB/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/FX507ZC4/Desktop/台銀/test web form/BOTWEB/BOTWEB/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FX507ZC4/Desktop/test web form/BOTWEB/BOTWEB/Views/_ViewImports.cshtml]
+[C:/Users/FX507ZC4/Desktop/台銀/test web form/BOTWEB/BOTWEB/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FX507ZC4/Desktop/test web form/BOTWEB/BOTWEB/Views/_ViewStart.cshtml]
+[C:/Users/FX507ZC4/Desktop/台銀/test web form/BOTWEB/BOTWEB/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/FX507ZC4/Desktop/test web form/BOTWEB/BOTWEB/Views/Shared/_Layout.cshtml]
+[C:/Users/FX507ZC4/Desktop/台銀/test web form/BOTWEB/BOTWEB/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-5uxrwyvdbq

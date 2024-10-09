@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BOTWEB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b2644ca30e7c385d7b687a71b390ee8a3241a92")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c23cc0489207ffd3d5cd9ad5a00070c6f149974d")]
 [assembly: System.Reflection.AssemblyProductAttribute("BOTWEB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BOTWEB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

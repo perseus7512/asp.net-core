@@ -1,5 +1,5 @@
 ﻿<link href="~/css/Role.css" rel="stylesheet" asp-append-version="true" />
-
+<script src="~/js/Role.js" asp-append-version="true" defer></script>
 <form class="p-3">
     <div class="row m-2 h5 fw-bolder">角色查詢</div>
     <div class="row m-3">
@@ -30,7 +30,7 @@
 </form>
 
 <div id="Role" class="mt-4 px-4">
-    <button type="button" class="btn btn-success my-3" style="float: right;" onclick="location.href='@Url.Action("Role_create", "Home")';">新增角色</button>
+    <button type="button" class="btn btn-success my-3" style="float: right;" onclick="location.href='@Url.Action("Role_CRUD", "Home")';">新增角色</button>
     <table class="table">
         <thead>
             <tr>
@@ -49,7 +49,7 @@
                 <td>123</td>
                 <td id="operate">
                     <button type="button" class="btn btn-danger">查看</button>
-                    <button type="button" class="btn btn-primary">編輯</button>
+                    <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Role_create", "Home")';">編輯</button>
                     <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">刪除</button>
                 </td>
             </tr>

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\FX507ZC4\\Desktop\\test web form\\BOTWEB\\BOTWEB\\BOTWEB.csproj",
+      "projectUniqueName": "C:\\Users\\FX507ZC4\\Desktop\\台銀\\test web form\\BOTWEB\\BOTWEB\\BOTWEB.csproj",
       "projectName": "BOTWEB",
-      "projectPath": "C:\\Users\\FX507ZC4\\Desktop\\test web form\\BOTWEB\\BOTWEB\\BOTWEB.csproj",
+      "projectPath": "C:\\Users\\FX507ZC4\\Desktop\\台銀\\test web form\\BOTWEB\\BOTWEB\\BOTWEB.csproj",
       "packagesPath": "C:\\Users\\FX507ZC4\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\FX507ZC4\\Desktop\\test web form\\BOTWEB\\BOTWEB\\obj\\",
+      "outputPath": "C:\\Users\\FX507ZC4\\Desktop\\台銀\\test web form\\BOTWEB\\BOTWEB\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\FX507ZC4\\AppData\\Roaming\\NuGet\\NuGet.Config",

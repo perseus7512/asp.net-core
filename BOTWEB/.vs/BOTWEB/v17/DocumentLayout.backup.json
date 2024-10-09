@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\FX507ZC4\\Desktop\\test web form\\BOTWEB\\",
+  "WorkspaceRootPath": "C:\\Users\\FX507ZC4\\Desktop\\\u53F0\u9280\\test web form\\BOTWEB\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{86A5DDDD-284A-4476-8669-10CE00A551E6}|BOTWEB\\BOTWEB.csproj|c:\\users\\fx507zc4\\desktop\\test web form\\botweb\\botweb\\views\\home\\role_create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{86A5DDDD-284A-4476-8669-10CE00A551E6}|BOTWEB\\BOTWEB.csproj|solutionrelative:botweb\\views\\home\\role_create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{86A5DDDD-284A-4476-8669-10CE00A551E6}|BOTWEB\\BOTWEB.csproj|c:\\users\\fx507zc4\\desktop\\\u53F0\u9280\\test web form\\botweb\\botweb\\views\\home\\announcement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{86A5DDDD-284A-4476-8669-10CE00A551E6}|BOTWEB\\BOTWEB.csproj|solutionrelative:botweb\\views\\home\\announcement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86A5DDDD-284A-4476-8669-10CE00A551E6}|BOTWEB\\BOTWEB.csproj|c:\\users\\fx507zc4\\desktop\\test web form\\botweb\\botweb\\wwwroot\\css\\role_create.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{86A5DDDD-284A-4476-8669-10CE00A551E6}|BOTWEB\\BOTWEB.csproj|solutionrelative:botweb\\wwwroot\\css\\role_create.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{86A5DDDD-284A-4476-8669-10CE00A551E6}|BOTWEB\\BOTWEB.csproj|c:\\users\\fx507zc4\\desktop\\\u53F0\u9280\\test web form\\botweb\\botweb\\wwwroot\\css\\announcement.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{86A5DDDD-284A-4476-8669-10CE00A551E6}|BOTWEB\\BOTWEB.csproj|solutionrelative:botweb\\wwwroot\\css\\announcement.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86A5DDDD-284A-4476-8669-10CE00A551E6}|BOTWEB\\BOTWEB.csproj|c:\\users\\fx507zc4\\desktop\\test web form\\botweb\\botweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{86A5DDDD-284A-4476-8669-10CE00A551E6}|BOTWEB\\BOTWEB.csproj|solutionrelative:botweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86A5DDDD-284A-4476-8669-10CE00A551E6}|BOTWEB\\BOTWEB.csproj|c:\\users\\fx507zc4\\desktop\\test web form\\botweb\\botweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{86A5DDDD-284A-4476-8669-10CE00A551E6}|BOTWEB\\BOTWEB.csproj|c:\\users\\fx507zc4\\desktop\\\u53F0\u9280\\test web form\\botweb\\botweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{86A5DDDD-284A-4476-8669-10CE00A551E6}|BOTWEB\\BOTWEB.csproj|solutionrelative:botweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86A5DDDD-284A-4476-8669-10CE00A551E6}|BOTWEB\\BOTWEB.csproj|c:\\users\\fx507zc4\\desktop\\\u53F0\u9280\\test web form\\botweb\\botweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{86A5DDDD-284A-4476-8669-10CE00A551E6}|BOTWEB\\BOTWEB.csproj|solutionrelative:botweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,24 +30,25 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\FX507ZC4\\Desktop\\test web form\\BOTWEB\\BOTWEB\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\FX507ZC4\\Desktop\\\u53F0\u9280\\test web form\\BOTWEB\\BOTWEB\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "BOTWEB\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\FX507ZC4\\Desktop\\test web form\\BOTWEB\\BOTWEB\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\FX507ZC4\\Desktop\\\u53F0\u9280\\test web form\\BOTWEB\\BOTWEB\\Controllers\\HomeController.cs",
               "RelativeToolTip": "BOTWEB\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAA/wDIAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwBoAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T00:12:50.43Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\FX507ZC4\\Desktop\\test web form\\BOTWEB\\BOTWEB\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\FX507ZC4\\Desktop\\\u53F0\u9280\\test web form\\BOTWEB\\BOTWEB\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "BOTWEB\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\FX507ZC4\\Desktop\\test web form\\BOTWEB\\BOTWEB\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\FX507ZC4\\Desktop\\\u53F0\u9280\\test web form\\BOTWEB\\BOTWEB\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "BOTWEB\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAADYAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -57,27 +58,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Role_create.cshtml",
-              "DocumentMoniker": "C:\\Users\\FX507ZC4\\Desktop\\test web form\\BOTWEB\\BOTWEB\\Views\\Home\\Role_create.cshtml",
-              "RelativeDocumentMoniker": "BOTWEB\\Views\\Home\\Role_create.cshtml",
-              "ToolTip": "C:\\Users\\FX507ZC4\\Desktop\\test web form\\BOTWEB\\BOTWEB\\Views\\Home\\Role_create.cshtml*",
-              "RelativeToolTip": "BOTWEB\\Views\\Home\\Role_create.cshtml*",
-              "ViewState": "AgIAABwAAAAAAAAAAAAwwCMAAAAiAAAAAAAAAA==",
+              "Title": "announcement.cshtml",
+              "DocumentMoniker": "C:\\Users\\FX507ZC4\\Desktop\\\u53F0\u9280\\test web form\\BOTWEB\\BOTWEB\\Views\\Home\\announcement.cshtml",
+              "RelativeDocumentMoniker": "BOTWEB\\Views\\Home\\announcement.cshtml",
+              "ToolTip": "C:\\Users\\FX507ZC4\\Desktop\\\u53F0\u9280\\test web form\\BOTWEB\\BOTWEB\\Views\\Home\\announcement.cshtml*",
+              "RelativeToolTip": "BOTWEB\\Views\\Home\\announcement.cshtml*",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAAEgAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-07T00:51:25.038Z",
+              "WhenOpened": "2024-10-09T07:20:49.321Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Role_create.css",
-              "DocumentMoniker": "C:\\Users\\FX507ZC4\\Desktop\\test web form\\BOTWEB\\BOTWEB\\wwwroot\\css\\Role_create.css",
-              "RelativeDocumentMoniker": "BOTWEB\\wwwroot\\css\\Role_create.css",
-              "ToolTip": "C:\\Users\\FX507ZC4\\Desktop\\test web form\\BOTWEB\\BOTWEB\\wwwroot\\css\\Role_create.css",
-              "RelativeToolTip": "BOTWEB\\wwwroot\\css\\Role_create.css",
-              "ViewState": "AgIAABEAAAAAAAAAAAAqwBsAAAAVAAAAAAAAAA==",
+              "Title": "announcement.css",
+              "DocumentMoniker": "C:\\Users\\FX507ZC4\\Desktop\\\u53F0\u9280\\test web form\\BOTWEB\\BOTWEB\\wwwroot\\css\\announcement.css",
+              "RelativeDocumentMoniker": "BOTWEB\\wwwroot\\css\\announcement.css",
+              "ToolTip": "C:\\Users\\FX507ZC4\\Desktop\\\u53F0\u9280\\test web form\\BOTWEB\\BOTWEB\\wwwroot\\css\\announcement.css",
+              "RelativeToolTip": "BOTWEB\\wwwroot\\css\\announcement.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-10-07T01:04:41.953Z",
+              "WhenOpened": "2024-10-09T07:33:32.146Z",
               "EditorCaption": ""
             }
           ]

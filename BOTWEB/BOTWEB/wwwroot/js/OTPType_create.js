@@ -44,11 +44,11 @@ function showStep(step) {
     }
 }
 
-
-
 function updateButtons(step) {
     const nextBtn = document.getElementById('nextBtn'); // 主按鈕 (下一步/新增/回系統管理頁面)
     const prevBtn = document.getElementById('prevBtn'); // 次按鈕 (取消/上一步)
+    const leftBtnContainer = document.getElementById('leftBtnContainer'); // 左邊的按鈕容器
+    const rightBtnContainer = document.getElementById('rightBtnContainer'); // 右邊的按鈕容器
 
     // 根據步驟更新按鈕的文字與行為
     if (step === 1) {
@@ -58,6 +58,10 @@ function updateButtons(step) {
         prevBtn.innerText = '取消';
         prevBtn.style.display = 'inline';
         prevBtn.onclick = cancelProcess; // 點擊後取消流程
+
+        leftBtnContainer.style.display = 'flex'; // 顯示左側按鈕容器
+        rightBtnContainer.classList.remove('col-md-12'); // 移除佔據整行的樣式
+        rightBtnContainer.classList.add('col-md-6'); // 回復到原本的樣式
     } else if (step === 2) {
         nextBtn.innerText = '新增';
         nextBtn.onclick = addEntry; // 點擊後新增資料
@@ -65,16 +69,20 @@ function updateButtons(step) {
         prevBtn.innerText = '上一步';
         prevBtn.style.display = 'inline';
         prevBtn.onclick = prevStep; // 點擊後回到上一步
+
+        leftBtnContainer.style.display = 'flex';
+        rightBtnContainer.classList.remove('col-md-12');
+        rightBtnContainer.classList.add('col-md-6');
     } else if (step === 3) {
         nextBtn.innerText = '回系統管理頁面';
         nextBtn.onclick = goToAdminPage; // 點擊後回到系統管理頁面
 
-        prevBtn.style.display = 'none'; // 隱藏次按鈕
+        prevBtn.style.display = 'none'; // 隱藏取消按鈕
+        leftBtnContainer.style.display = 'none'; // 完全隱藏左邊的按鈕容器
 
-        const buttonContainer = nextBtn.parentElement; // 假設 nextBtn 和 prevBtn 是同一個父容器
-        buttonContainer.style.display = 'flex';
-        buttonContainer.style.justifyContent = 'center'; // 水平置中
-        nextBtn.style.flexGrow = '1';
+        rightBtnContainer.classList.remove('col-md-6'); // 移除佔據一半的樣式
+        rightBtnContainer.classList.add('col-md-12'); // 讓右側按鈕容器佔據整行
+        rightBtnContainer.style.justifyContent = 'center'; // 水平置中按鈕
     }
 }
 
